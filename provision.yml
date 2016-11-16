@@ -1,0 +1,16 @@
+---
+- hosts: production
+  user: root
+  vars:
+    username: change
+    password: change
+    public_key: ~/.ssh/id_rsa.pub
+  roles: 
+   - common
+   - ufw
+   - user
+   - nginx
+   - php
+   - mariadb
+   - wp-cli
+   - ssh
